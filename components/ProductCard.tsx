@@ -1,19 +1,24 @@
-import type { Product } from "@/data/products";
+"use client";
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
 
 type ProductCardProps = {
-  product: Product;
+  productKey: string;
   index: number;
 };
 
-export default function ProductCard({ product, index }: ProductCardProps) {
+export default function ProductCard({ productKey, index }: ProductCardProps) {
+  const t = useTranslations("products");
+
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-2xl bg-card shadow-soft transition-all duration-300 hover:shadow-card">
       {/* Product Image */}
       <div className="relative aspect-[4/3] overflow-hidden bg-secondary">
         <Image
           src="/images/product-moxa.jpg"
-          alt={product.name}
+          alt={t(`items.${productKey}.name`)}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
@@ -35,13 +40,13 @@ export default function ProductCard({ product, index }: ProductCardProps) {
               Moxa Supply
             </p>
             <h2 className="mt-2 font-serif text-xl font-semibold text-foreground">
-              {product.name}
+              {t(`items.${productKey}.name`)}
             </h2>
           </div>
         </div>
         
         <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
-          {product.description}
+          {t(`items.${productKey}.description`)}
         </p>
 
         <div className="mt-6 border-t border-border pt-4">
@@ -51,14 +56,17 @@ export default function ProductCard({ product, index }: ProductCardProps) {
                 Use Case
               </p>
               <p className="mt-1 text-sm font-medium text-foreground">
-                {product.use}
+                {t(`items.${productKey}.use`)}
               </p>
             </div>
-            <button className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-primary-foreground">
+            <Link 
+              href="/contact"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+            >
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

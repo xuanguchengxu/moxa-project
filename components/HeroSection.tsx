@@ -1,7 +1,12 @@
-import Link from "next/link";
+"use client";
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
 
 export default function HeroSection() {
+  const t = useTranslations("hero");
+
   return (
     <section className="relative overflow-hidden bg-background">
       {/* Background Gradient */}
@@ -14,17 +19,16 @@ export default function HeroSection() {
             <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2">
               <span className="h-2 w-2 rounded-full bg-primary" />
               <span className="text-xs font-medium uppercase tracking-wider text-primary">
-                Premium Wellness Supply
+                {t("badge")}
               </span>
             </div>
             
-            <h1 className="mt-8 font-serif text-5xl font-semibold leading-tight tracking-tight text-foreground sm:text-6xl lg:text-7xl">
-              <span className="text-balance">Traditional Eastern Wellness for Modern Clinics</span>
+            <h1 className="mt-8 font-serif text-4xl font-semibold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+              <span className="text-balance">{t("title")}</span>
             </h1>
             
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Premium moxa sourcing from Japan&apos;s finest herbal production regions. 
-              Trusted by luxury spas and acupuncture clinics worldwide.
+              {t("subtitle")}
             </p>
             
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -32,7 +36,7 @@ export default function HeroSection() {
                 href="/products"
                 className="inline-flex h-14 items-center justify-center rounded-full bg-primary px-8 text-sm font-semibold text-primary-foreground shadow-soft transition-all hover:bg-primary/90 hover:shadow-card"
               >
-                Explore Products
+                {t("cta1")}
                 <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -41,16 +45,16 @@ export default function HeroSection() {
                 href="/contact"
                 className="inline-flex h-14 items-center justify-center rounded-full border-2 border-border bg-card px-8 text-sm font-semibold text-foreground transition-all hover:border-primary hover:bg-primary/5"
               >
-                Contact Us
+                {t("cta2")}
               </Link>
             </div>
 
             {/* Stats */}
             <div className="mt-16 grid grid-cols-3 gap-8 border-t border-border pt-10">
               {[
-                { value: "15+", label: "Years Experience" },
-                { value: "500+", label: "Global Partners" },
-                { value: "50+", label: "Countries Served" },
+                { value: "15+", label: t("stats.years") },
+                { value: "500+", label: t("stats.partners") },
+                { value: "50+", label: t("stats.countries") },
               ].map((stat) => (
                 <div key={stat.label}>
                   <p className="font-serif text-3xl font-semibold text-primary">{stat.value}</p>
@@ -75,10 +79,10 @@ export default function HeroSection() {
               {/* Floating Card */}
               <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-card/95 p-6 shadow-card backdrop-blur-sm">
                 <p className="text-xs font-semibold uppercase tracking-wider text-primary">
-                  Clinical Excellence
+                  Nanyang, China
                 </p>
                 <p className="mt-2 font-serif text-lg font-medium text-foreground">
-                  Premium moxa products for acupuncture, therapy, and wellness professionals
+                  Traditional moxa production region since ancient times
                 </p>
               </div>
             </div>

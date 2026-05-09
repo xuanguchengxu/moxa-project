@@ -1,17 +1,20 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
-
-const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/products", label: "Products" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
+  const t = useTranslations("nav");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navItems = [
+    { href: "/", label: t("home") },
+    { href: "/products", label: t("products") },
+    { href: "/about", label: t("about") },
+    { href: "/contact", label: t("contact") },
+  ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/50 bg-background/95 backdrop-blur-md">
@@ -48,29 +51,37 @@ export default function Navbar() {
               {item.label}
             </Link>
           ))}
+        </div>
+
+        {/* Right Side */}
+        <div className="hidden items-center gap-4 md:flex">
+          <LanguageSwitcher />
           <Link
             href="/contact"
-            className="ml-4 rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground shadow-soft transition-all hover:bg-primary/90 hover:shadow-card"
+            className="rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground shadow-soft transition-all hover:bg-primary/90 hover:shadow-card"
           >
-            Get Started
+            {t("getStarted")}
           </Link>
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          type="button"
-          className="rounded-lg p-2 text-muted-foreground transition-colors hover:bg-secondary md:hidden"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            {mobileMenuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <LanguageSwitcher />
+          <button
+            type="button"
+            className="rounded-lg p-2 text-muted-foreground transition-colors hover:bg-secondary"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {mobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Menu */}
@@ -92,7 +103,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="mt-2 rounded-lg bg-primary px-4 py-3 text-center text-sm font-medium text-primary-foreground shadow-soft"
             >
-              Get Started
+              {t("getStarted")}
             </Link>
           </div>
         </div>

@@ -1,11 +1,14 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { useTranslations } from "next-intl";
 
 type FormState = {
   name: string;
   email: string;
   company: string;
+  country: string;
+  type: string;
   message: string;
 };
 
@@ -13,81 +16,118 @@ const initialState: FormState = {
   name: "",
   email: "",
   company: "",
+  country: "",
+  type: "",
   message: "",
 };
 
 export default function ContactForm() {
+  const t = useTranslations("contact.form");
   const [form, setForm] = useState<FormState>(initialState);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
   function updateField(field: keyof FormState, value: string) {
     setForm((current) => ({ ...current, [field]: value }));
     setSubmitted(false);
   }
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    setSubmitting(true);
+    
+    // Simulate API call
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    
     console.log("B2B wellness inquiry", form);
     setSubmitted(true);
+    setSubmitting(false);
     setForm(initialState);
   }
+
+  const businessTypes = ["clinic", "spa", "distributor", "retailer", "other"] as const;
 
   return (
     <form onSubmit={handleSubmit} className="rounded-2xl bg-card p-8 shadow-card">
       <div className="grid gap-6">
         <div className="grid gap-6 sm:grid-cols-2">
           <label className="grid gap-2">
-            <span className="text-sm font-medium text-foreground">Full Name</span>
+            <span className="text-sm font-medium text-foreground">{t("name")}</span>
             <input
               required
               value={form.name}
               onChange={(event) => updateField("name", event.target.value)}
               className="h-12 rounded-xl border border-input bg-background px-4 text-foreground outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
-              placeholder="Your name"
             />
           </label>
 
           <label className="grid gap-2">
-            <span className="text-sm font-medium text-foreground">Email Address</span>
+            <span className="text-sm font-medium text-foreground">{t("email")}</span>
             <input
               required
               type="email"
               value={form.email}
               onChange={(event) => updateField("email", event.target.value)}
               className="h-12 rounded-xl border border-input bg-background px-4 text-foreground outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
-              placeholder="name@company.com"
+            />
+          </label>
+        </div>
+
+        <div className="grid gap-6 sm:grid-cols-2">
+          <label className="grid gap-2">
+            <span className="text-sm font-medium text-foreground">{t("company")}</span>
+            <input
+              value={form.company}
+              onChange={(event) => updateField("company", event.target.value)}
+              className="h-12 rounded-xl border border-input bg-background px-4 text-foreground outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
+            />
+          </label>
+
+          <label className="grid gap-2">
+            <span className="text-sm font-medium text-foreground">{t("country")}</span>
+            <input
+              value={form.country}
+              onChange={(event) => updateField("country", event.target.value)}
+              className="h-12 rounded-xl border border-input bg-background px-4 text-foreground outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
             />
           </label>
         </div>
 
         <label className="grid gap-2">
-          <span className="text-sm font-medium text-foreground">Company / Organization</span>
-          <input
-            value={form.company}
-            onChange={(event) => updateField("company", event.target.value)}
+          <span className="text-sm font-medium text-foreground">{t("type")}</span>
+          <select
+            value={form.type}
+            onChange={(event) => updateField("type", event.target.value)}
             className="h-12 rounded-xl border border-input bg-background px-4 text-foreground outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
-            placeholder="Your clinic or business name"
-          />
+          >
+            <option value="">--</option>
+            {businessTypes.map((type) => (
+              <option key={type} value={type}>
+                {t(`types.${type}`)}
+              </option>
+            ))}
+          </select>
         </label>
 
         <label className="grid gap-2">
-          <span className="text-sm font-medium text-foreground">Message</span>
+          <span className="text-sm font-medium text-foreground">{t("message")}</span>
           <textarea
             required
             rows={5}
             value={form.message}
             onChange={(event) => updateField("message", event.target.value)}
             className="resize-none rounded-xl border border-input bg-background px-4 py-3 text-foreground outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
-            placeholder="Tell us about your market, product interests, and expected cooperation model..."
+            placeholder={t("messagePlaceholder")}
           />
         </label>
       </div>
 
       <button
         type="submit"
-        className="mt-8 h-14 w-full rounded-xl bg-primary text-sm font-semibold text-primary-foreground shadow-soft transition-all hover:bg-primary/90 hover:shadow-card"
+        disabled={submitting}
+        className="mt-8 h-14 w-full rounded-xl bg-primary text-sm font-semibold text-primary-foreground shadow-soft transition-all hover:bg-primary/90 hover:shadow-card disabled:opacity-70"
       >
-        Send Inquiry
+        {submitting ? t("submitting") : t("submit")}
       </button>
 
       {submitted && (
@@ -98,7 +138,7 @@ export default function ContactForm() {
             </svg>
           </div>
           <p className="text-sm font-medium text-primary">
-            Thank you! Your inquiry has been received.
+            {t("success")}
           </p>
         </div>
       )}
