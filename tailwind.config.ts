@@ -9,23 +9,53 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#20201d",
-        stonewash: "#f6f3ed",
-        rice: "#fffdf8",
-        matcha: "#687768",
-        cedar: "#39352e",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
       },
       fontFamily: {
         sans: [
-          "Inter",
+          "var(--font-inter)",
           "ui-sans-serif",
           "system-ui",
-          "Segoe UI",
           "sans-serif",
+        ],
+        serif: [
+          "var(--font-cormorant)",
+          "ui-serif",
+          "Georgia",
+          "serif",
         ],
       },
       boxShadow: {
-        soft: "0 18px 50px rgba(32, 32, 29, 0.08)",
+        soft: "0 4px 24px -4px rgba(139, 115, 85, 0.12)",
+        card: "0 8px 32px -8px rgba(139, 115, 85, 0.15)",
+        elevated: "0 16px 48px -12px rgba(139, 115, 85, 0.18)",
+      },
+      borderRadius: {
+        DEFAULT: "var(--radius)",
       },
     },
   },
