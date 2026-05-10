@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/font": "^14.2.15",
     "next": "latest",
+    "next-intl": "^4.11.1",
     "react": "latest",
     "react-dom": "latest"
   },

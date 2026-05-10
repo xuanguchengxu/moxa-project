@@ -1,0 +1,347 @@
+{
+  "metadata": {
+    "title": "Moxa Source Partner | 南阳优质艾绒供应",
+    "description": "扎根中国传统艾草产区南阳，为全球健康专业人士提供可靠的现代治疗用品采购解决方案。",
+    "keywords": "艾绒供应商, 南阳艾绒生产, 日本艾灸产品, 针灸诊所供应, 无烟艾灸设备, OEM艾绒供应, 健康理疗产品"
+  },
+  "nav": {
+    "home": "首页",
+    "products": "产品中心",
+    "about": "关于我们",
+    "process": "合作流程",
+    "quality": "质量管理",
+    "contact": "联系我们",
+    "getStarted": "开始合作",
+    "requestSample": "申请样品",
+    "becomeDistributor": "成为代理商"
+  },
+  "hero": {
+    "badge": "正宗南阳艾绒",
+    "title": "为全球健康专业人士提供优质艾绒供应",
+    "subtitle": "扎根中国传统艾草产区南阳，为诊所、水疗中心和经销商提供适合现代治疗实践的可靠采购解决方案。",
+    "cta1": "浏览产品",
+    "cta2": "申请样品",
+    "stats": {
+      "years": "年艾绒生产经验",
+      "partners": "全球合作伙伴",
+      "countries": "国家出口记录"
+    }
+  },
+  "markets": {
+    "badge": "B2B市场",
+    "title": "服务全球健康专业人士",
+    "subtitle": "从针灸诊所到高端水疗中心，我们为全球健康专业人士提供优质艾绒产品。",
+    "items": {
+      "clinics": {
+        "title": "针灸诊所",
+        "description": "传统艾灸治疗的优质艾绒产品"
+      },
+      "therapy": {
+        "title": "中医理疗中心",
+        "description": "专业施术的热疗解决方案"
+      },
+      "spas": {
+        "title": "健康水疗中心",
+        "description": "高端水疗体验的优质艾绒产品"
+      },
+      "distributors": {
+        "title": "国际经销商",
+        "description": "可靠的OEM和批发供应解决方案"
+      }
+    }
+  },
+  "features": {
+    "badge": "为什么选择南阳",
+    "title": "来自中国艾草核心产区的正宗采购",
+    "subtitle": "南阳数百年来一直是艾绒生产的中心。我们将这一传统专业技术带给现代健康专业人士。",
+    "items": {
+      "quality": {
+        "title": "优质品质保证",
+        "description": "从原料艾草选择到最终包装，实施严格的质量控制。"
+      },
+      "supply": {
+        "title": "稳定的供应链",
+        "description": "直接获取南阳丰富的艾草资源，确保稳定供应。"
+      },
+      "oem": {
+        "title": "OEM与贴牌服务",
+        "description": "为您的健康品牌提供定制品牌和包装解决方案。"
+      },
+      "export": {
+        "title": "出口就绪",
+        "description": "丰富的国际运输经验，提供完善的文件和合规服务。"
+      }
+    }
+  },
+  "process": {
+    "badge": "合作流程",
+    "title": "简单的合作步骤",
+    "subtitle": "我们简化了合作流程，使国际合作更加顺畅高效。",
+    "steps": {
+      "inquiry": {
+        "title": "提交询盘",
+        "description": "告诉我们您的业务需求、目标产品和数量要求。"
+      },
+      "consultation": {
+        "title": "产品咨询",
+        "description": "我们的团队提供产品推荐和详细规格说明。"
+      },
+      "sample": {
+        "title": "样品评估",
+        "description": "在承诺批量订单前，收到样品验证质量。"
+      },
+      "order": {
+        "title": "下单发货",
+        "description": "灵活的付款条件和可靠的国际运输为您的订单保驾护航。"
+      }
+    }
+  },
+  "quality": {
+    "badge": "质量保证",
+    "title": "追求卓越",
+    "subtitle": "每款产品都经过严格的质量控制，以符合国际健康标准。",
+    "items": {
+      "sourcing": {
+        "title": "优质原材料",
+        "description": "仅从南阳知名种植区采购最优质的陈年艾草。"
+      },
+      "processing": {
+        "title": "传统加工工艺",
+        "description": "传统技法与现代卫生标准相结合。"
+      },
+      "testing": {
+        "title": "质量检测",
+        "description": "每批产品都检测纯度、燃烧特性和治疗效果。"
+      },
+      "packaging": {
+        "title": "出口包装",
+        "description": "符合国际标准的防潮专业品牌包装。"
+      }
+    }
+  },
+  "applications": {
+    "badge": "行业应用",
+    "title": "服务多元化健康领域",
+    "subtitle": "我们的产品受到世界各地健康专业人士的信赖。",
+    "items": {
+      "acupuncture": {
+        "title": "针灸诊所",
+        "description": "为执业针灸师和中医师提供传统艾灸治疗。"
+      },
+      "osteopathy": {
+        "title": "整骨理疗中心",
+        "description": "将热疗融入手法治疗和康复。"
+      },
+      "wellness": {
+        "title": "健康水疗中心",
+        "description": "为高端健康目的地提供优质艾灸体验。"
+      },
+      "retail": {
+        "title": "零售分销",
+        "description": "为健康食品店和在线零售商提供批发供应。"
+      }
+    }
+  },
+  "trust": {
+    "badge": "信任我们的理由",
+    "title": "可靠的合作伙伴关系保证",
+    "subtitle": "我们深知信任在国际B2B关系中的重要性。",
+    "items": {
+      "response": {
+        "title": "24-48小时响应",
+        "description": "所有询盘和订单的快速沟通"
+      },
+      "samples": {
+        "title": "样品优先政策",
+        "description": "在承诺大单前先评估产品"
+      },
+      "shipping": {
+        "title": "全球发货",
+        "description": "出口经验覆盖50多个国家"
+      },
+      "support": {
+        "title": "专属支持",
+        "description": "为所有合作伙伴提供专属客户经理"
+      }
+    }
+  },
+  "products": {
+    "badge": "产品目录",
+    "title": "优质艾绒产品",
+    "subtitle": "从传统艾条到现代无烟设备，我们提供完整的专业用途产品线。",
+    "viewDetails": "查看详情",
+    "requestQuote": "询价",
+    "items": {
+      "stick": {
+        "name": "优质艾条",
+        "description": "采用南阳陈年艾草手工卷制的传统艾条。提供多种等级和规格。",
+        "use": "诊所、理疗中心"
+      },
+      "smokeless": {
+        "name": "无烟艾灸设备",
+        "description": "适合室内临床使用的现代低烟艾灸设备。燃烧清洁，热量稳定。",
+        "use": "现代诊所、水疗中心"
+      },
+      "box": {
+        "name": "艾灸盒",
+        "description": "用于全身施术的热疗盒。针对不同身体部位提供多种尺寸。",
+        "use": "水疗中心、理疗中心"
+      },
+      "wool": {
+        "name": "艾绒原料",
+        "description": "用于定制应用和OEM生产的优质艾绒原料。",
+        "use": "OEM、生产制造"
+      }
+    },
+    "customSolutions": {
+      "title": "定制解决方案",
+      "description": "需要特殊规格、贴牌或OEM服务？我们根据您的需求提供定制服务。",
+      "cta": "讨论需求"
+    }
+  },
+  "about": {
+    "badge": "关于我们",
+    "title": "扎根南阳艾草传统",
+    "subtitle": "我们是一家位于中国传统艾绒生产中心南阳的专业艾绒供应合作伙伴。",
+    "story": {
+      "title": "我们的故事",
+      "p1": "南阳一千多年来一直是中国艾绒生产的核心产区。这一地区独特的气候和土壤条件，培育出具有卓越治疗品质的艾草。",
+      "p2": "我们创建供应业务，旨在将这一传统资源与全球健康专业人士连接起来。我们的使命很简单：以透明的采购和专业的服务，提供可靠、高品质的艾绒产品。"
+    },
+    "values": {
+      "title": "我们的价值观",
+      "authenticity": {
+        "title": "正宗性",
+        "description": "来源可追溯的南阳正品"
+      },
+      "quality": {
+        "title": "品质",
+        "description": "从原材料到成品的严格标准"
+      },
+      "reliability": {
+        "title": "可靠性",
+        "description": "稳定供应和可信赖的合作关系"
+      },
+      "service": {
+        "title": "服务",
+        "description": "贯穿合作全程的专业支持"
+      }
+    },
+    "stats": {
+      "production": "年生产能力",
+      "partners": "活跃合作伙伴",
+      "countries": "出口国家数",
+      "experience": "年经验"
+    }
+  },
+  "contact": {
+    "badge": "联系我们",
+    "title": "开启您的合作之旅",
+    "subtitle": "告诉我们您的业务需求。我们会在24-48小时内回复所有询盘。",
+    "form": {
+      "name": "您的姓名",
+      "email": "电子邮箱",
+      "company": "公司名称",
+      "country": "国家/地区",
+      "type": "业务类型",
+      "types": {
+        "clinic": "针灸诊所",
+        "spa": "健康水疗中心",
+        "distributor": "经销商",
+        "retailer": "零售商",
+        "other": "其他"
+      },
+      "products": "感兴趣的产品",
+      "message": "您的留言",
+      "messagePlaceholder": "请告诉我们您的需求、数量要求和任何问题...",
+      "submit": "发送询盘",
+      "submitting": "发送中...",
+      "success": "感谢您的留言！我们会在24-48小时内回复。",
+      "error": "发送失败，请重试。"
+    },
+    "info": {
+      "email": {
+        "title": "电子邮件",
+        "description": "合作咨询",
+        "value": "contact@moxasource.com"
+      },
+      "hours": {
+        "title": "工作时间",
+        "description": "周一至周五",
+        "value": "9:00 - 18:00 (中国标准时间)"
+      },
+      "response": {
+        "title": "响应时间",
+        "description": "通常回复时间",
+        "value": "24-48小时内"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "description": "快速咨询",
+        "value": "+86 XXX XXXX XXXX"
+      },
+      "wechat": {
+        "title": "微信",
+        "description": "扫码联系",
+        "value": "扫描二维码"
+      }
+    },
+    "benefits": {
+      "title": "合作优势",
+      "items": [
+        "优质艾绒产品",
+        "有竞争力的B2B价格",
+        "灵活的订单数量",
+        "样品评估项目",
+        "可靠的国际运输",
+        "专属客户支持"
+      ]
+    }
+  },
+  "faq": {
+    "badge": "常见问题",
+    "title": "常见问题解答",
+    "subtitle": "关于产品和合作流程的常见问题。",
+    "items": {
+      "moq": {
+        "q": "最小起订量是多少？",
+        "a": "我们根据产品类型提供灵活的起订量。首次订单我们可以接受较小的数量，帮助您测试市场。具体产品的起订量请联系我们。"
+      },
+      "samples": {
+        "q": "可以在批量采购前订购样品吗？",
+        "a": "是的，我们非常鼓励样品评估。样品订单可用，运费由买方承担。样品费用可能在未来批量订单时抵扣。"
+      },
+      "shipping": {
+        "q": "你们发货到哪些国家？",
+        "a": "我们发货到全球50多个国家，包括日本、美国、欧洲、澳大利亚和东南亚。我们处理所有出口文件，可通过空运或海运发货。"
+      },
+      "payment": {
+        "q": "接受哪些付款方式？",
+        "a": "我们接受银行转账（T/T）、小额订单PayPal，大额订单可讨论信用证。长期合作伙伴可协商付款条款。"
+      },
+      "oem": {
+        "q": "提供OEM/贴牌服务吗？",
+        "a": "是的，我们提供完整的OEM服务，包括定制配方、贴牌包装和品牌专属产品开发。OEM订单适用起订量要求。"
+      },
+      "quality": {
+        "q": "如何确保产品质量？",
+        "a": "每批产品都进行纯度、含水量和燃烧特性的质量检测。我们可根据要求提供质量证书和检测报告。"
+      }
+    }
+  },
+  "cta": {
+    "title": "准备好采购优质艾绒了吗？",
+    "subtitle": "加入全球信赖我们可靠艾绒供应的健康专业人士行列。",
+    "primary": "申请样品",
+    "secondary": "联系我们"
+  },
+  "footer": {
+    "description": "扎根中国传统艾草产区南阳，为全球健康专业人士提供可靠的现代治疗用品采购解决方案。",
+    "company": "公司信息",
+    "products": "产品",
+    "support": "支持",
+    "legal": "法律信息",
+    "copyright": "Moxa Source Partner. 版权所有。",
+    "tagline": "正宗南阳艾绒，服务全球健康"
+  }
+}

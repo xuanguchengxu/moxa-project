@@ -1,26 +1,74 @@
-import type { Product } from "@/data/products";
+"use client";
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
+import Image from "next/image";
 
 type ProductCardProps = {
-  product: Product;
+  productKey: string;
+  index: number;
 };
 
-export default function ProductCard({ product }: ProductCardProps) {
+export default function ProductCard({ productKey, index }: ProductCardProps) {
+  const t = useTranslations("products");
+
   return (
-    <article className="flex min-h-64 flex-col justify-between bg-white p-6 shadow-soft ring-1 ring-cedar/10">
-      <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-matcha">
-          Moxa Supply
-        </p>
-        <h2 className="mt-4 text-xl font-semibold text-ink">{product.name}</h2>
-        <p className="mt-4 text-sm leading-7 text-cedar/80">
-          {product.description}
-        </p>
+    <article className="group relative flex flex-col overflow-hidden rounded-2xl bg-card shadow-soft transition-all duration-300 hover:shadow-card">
+      {/* Product Image */}
+      <div className="relative aspect-[4/3] overflow-hidden bg-secondary">
+        <Image
+          src="/images/product-moxa.jpg"
+          alt={t(`items.${productKey}.name`)}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+        
+        {/* Badge */}
+        <div className="absolute left-4 top-4">
+          <span className="inline-flex items-center rounded-full bg-card/90 px-3 py-1 text-xs font-medium text-primary backdrop-blur-sm">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+        </div>
       </div>
-      <div className="mt-8 border-t border-cedar/10 pt-4">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cedar/50">
-          Use Case
+
+      {/* Content */}
+      <div className="flex flex-1 flex-col p-6">
+        <div className="flex items-start justify-between">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-wider text-primary">
+              Moxa Supply
+            </p>
+            <h2 className="mt-2 font-serif text-xl font-semibold text-foreground">
+              {t(`items.${productKey}.name`)}
+            </h2>
+          </div>
+        </div>
+        
+        <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
+          {t(`items.${productKey}.description`)}
         </p>
-        <p className="mt-2 text-sm text-cedar">{product.use}</p>
+
+        <div className="mt-6 border-t border-border pt-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                Use Case
+              </p>
+              <p className="mt-1 text-sm font-medium text-foreground">
+                {t(`items.${productKey}.use`)}
+              </p>
+            </div>
+            <Link 
+              href="/contact"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+            >
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
       </div>
     </article>
   );
